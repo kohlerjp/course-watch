@@ -1,0 +1,14 @@
+<div class="container">
+<h1><%= @course.course_name %> - (<%= @course.crn %>)</h1>
+<%= form_for (current_user.enrollments.new()) do |f|  %>
+	<%= f.hidden_field :course_id,value:@course.id %>
+	<%= f.submit "Add Class", class: "btn btn-large btn-primary btn-signup" %>
+<% end %>
+<h4><%= @course.course_number %></h4>
+<div class="container users">
+		<ul>
+			<%= render partial: 'shared/user', collection:@course.users %>
+		</ul>
+	</div>
+
+</div>

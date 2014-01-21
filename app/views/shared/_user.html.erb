@@ -1,0 +1,7 @@
+<li>
+
+		<%= gravatar_for(user) %> <%= link_to("#{user.first_name.capitalize} #{user.last_name.capitalize}",user) %>
+		<% if current_user.admin? && !current_user?(user) %>
+			| <%= link_to("delete",user,method: :delete) %>
+		<% end %>
+</li>

@@ -1,0 +1,21 @@
+<% provide(:title,"New Course") %>
+<div class="container">
+<h1 class="center"> New Course </h2>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@course) do |f| %>
+
+        <%= f.text_field :crn, placeholder:"CRN" %>
+
+        <%= f.text_field :course_name, placeholder:"Course Name" %>
+
+        <%= f.text_field :course_number, placeholder:"Course Number" %>
+
+        <%= f.text_field :time, placeholder:"Time" %>
+
+        <%= f.submit "Create class", class: "btn btn-large btn-primary btn-signup" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
